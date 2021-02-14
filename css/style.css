@@ -1,0 +1,95 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+html {
+  font-family: Arial sans-serif; }
+
+.flex-container {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  height: 100vh;
+  justify-content: center;
+  align-content: center; }
+  .flex-container .flex-row {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    width: 90%; }
+    .flex-container .flex-row .flex-card {
+      display: flex;
+      flex: 1 1 20%;
+      flex-wrap: wrap;
+      border-bottom: whitesmoke 1px solid;
+      justify-content: space-around;
+      width: 100%; }
+      .flex-container .flex-row .flex-card .flex-button-primary {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 18px 40px;
+        height: 64px;
+        width: 135px;
+        border-radius: 16px;
+        color: #F7F7FC;
+        background: #5F2EEA; }
+        .flex-container .flex-row .flex-card .flex-button-primary:disabled {
+          opacity: 0.5; }
+        .flex-container .flex-row .flex-card .flex-button-primary .loader {
+          border-top: 5px solid #3498db;
+          border-right: 5px solid #3498db;
+          border-left: 5px solid #3498db;
+          border-bottom: 5px solid white;
+          border-radius: 50%;
+          width: 16px;
+          height: 16px;
+          animation: spin 2s linear infinite; }
+        .flex-container .flex-row .flex-card .flex-button-primary:hover {
+          background: #2A00A2;
+          transition: all 0.3s ease; }
+        .flex-container .flex-row .flex-card .flex-button-primary:focus {
+          border: 4px solid #E4DAFF; }
+      .flex-container .flex-row .flex-card .flex-button-secondary {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 18px 40px;
+        height: 64px;
+        width: 135px;
+        border-radius: 16px;
+        color: #5F2EEA;
+        background: #FCFCFC;
+        border: 2px solid #5F2EEA; }
+        .flex-container .flex-row .flex-card .flex-button-secondary:disabled {
+          opacity: 0.5; }
+        .flex-container .flex-row .flex-card .flex-button-secondary .loader {
+          border-top: 5px solid #3498db;
+          border-right: 5px solid #3498db;
+          border-left: 5px solid #3498db;
+          border-bottom: 5px solid white;
+          border-radius: 50%;
+          width: 16px;
+          height: 16px;
+          animation: spin 2s linear infinite; }
+        .flex-container .flex-row .flex-card .flex-button-secondary:hover {
+          color: #2A00A2;
+          border: 2px solid #2A00A2;
+          transition: all 0.3s ease; }
+        .flex-container .flex-row .flex-card .flex-button-secondary:focus {
+          border: 2px solid #5F2EEA;
+          box-sizing: border-box;
+          box-shadow: 0 0 0 4px #DED3FF; }
+        .flex-container .flex-row .flex-card .flex-button-secondary:after {
+          content: '';
+          display: inline-block;
+          height: 100%;
+          width: 0; }
+      .flex-container .flex-row .flex-card .flex-loading {
+        content: "loading"; }

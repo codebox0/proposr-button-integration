@@ -1,0 +1,46 @@
+@import "variables";
+@import "mixin";
+
+html {
+  font-family: Arial sans-serif;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  height: 100vh;
+  justify-content: center;
+  align-content: center;
+
+  .flex-row{
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    width: 90%;
+
+    .flex-card {
+      display: flex;
+      flex: 1 1 20%;
+      flex-wrap: wrap;
+      border-bottom: whitesmoke 1px solid;
+      justify-content: space-around;
+      width: 100%;
+
+      .flex-button-primary{
+        @include button-primary($primary_bg, $primary_hover, $primary_color);
+      }
+      .flex-button-secondary{
+        @include button-secondary($secondary_bg, $secondary_border,$secondary_hover, $secondary_color, $secondary_focus);
+      }
+      
+      .flex-loading {
+        content: "loading";
+      }
+
+    }
+  }
+
+}
